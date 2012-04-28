@@ -32,8 +32,9 @@
 		!window.jQuery && document.write("<script src=\"./js/jquery.js\"><\/script>")
 	</script>
 	<script src="./js/bootstrap/js/bootstrap.js"></script>
+	<script src="./js/my.js"></script>
 </head>
-<body>
+<body data-spy="scroll">
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -47,12 +48,12 @@
 			  <img src="./img/logotyp_developer_hub.png" alt="" />
           </a>
           <div class="nav-collapse">
-            <ul class="nav pull-right">
-              <li><a class="btn btn-large btn-success" href="#">Co je DeveloperHub?</a></li>
-              <li><a class="btn btn-large " href="#about">Novinky</a></li>
-              <li><a class="btn btn-large" href="#contact">Členové</a></li>
-				<li><a class="btn btn-large" href="#contact">Akce</a></li>
-				<li><a class="btn btn-large" href="#contact">Kontakt</a></li>
+            <ul class="nav pull-right" id="navbar">
+              <li><a class="btn btn-large" id="nav-home" href="#home">Co je DeveloperHub</a></li>
+              <li><a class="btn btn-large" id="nav-news" href="#about">Novinky</a></li>
+              <li><a class="btn btn-large" id="nav-members" href="#contact1">Členové</a></li>
+				<li><a class="btn btn-large" id="nav-action" href="#contact2">Akce</a></li>
+				<li><a class="btn btn-large" id="nav-contact" href="#contact3">Kontakt</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -62,13 +63,13 @@
     <div class="container">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
+      <div class="hero-unit" id="home">
         <h1>Hello, world!</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>
 
-      <div class="row">
+      <div class="row" id="home1">
 
         <div class="span8">
           <h2>Novinky</h2>
@@ -84,7 +85,7 @@
       </div>
 
 
-		<div class="row">
+		<div class="row" id="about">
 
 		        <div class="span8">
 		          <h2>Novinky</h2>
@@ -101,7 +102,7 @@
 
 
 
-		<div class="row">
+		<div class="row" id="contact1">
 
 		        <div class="span8">
 		          <h2>Novinky</h2>
@@ -118,7 +119,7 @@
 
 
 
-		<div class="row">
+		<div class="row" id="contact2">
 
 		        <div class="span8">
 		          <h2>Novinky</h2>
@@ -135,7 +136,7 @@
 
 
 
-		<div class="row">
+		<div class="row" id="contact3">
 
 		        <div class="span8">
 		          <h2>Novinky</h2>
@@ -174,9 +175,5 @@
 
     </div> <!-- /container -->
 
-	<!-- Le javascript
-	    ================================================== -->
-	    <!-- Placed at the end of the document so the pages load faster -->
-	    <script src="./js/bootstrap/js/bootstrap-scrollspy.js"></script>
   </body>
 </html>

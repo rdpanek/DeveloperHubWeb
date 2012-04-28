@@ -1351,23 +1351,22 @@
 
         this.activeTarget = target
 
-        $(this.selector)
-          .parent('.active')
-          .removeClass('active')
+       $(this.selector)
+          .removeClass('btn-success')
 
         selector = this.selector
           + '[data-target="' + target + '"],'
           + this.selector + '[href="' + target + '"]'
 
         active = $(selector)
-          .parent('li')
-          .addClass('active')
+          .addClass('btn-success')
 
         if (active.parent('.dropdown-menu'))  {
-          active = active.closest('li.dropdown').addClass('active')
+          active = active.closest('li.dropdown').addClass('btn-success')
         }
 
         active.trigger('activate')
+
       }
 
   }
