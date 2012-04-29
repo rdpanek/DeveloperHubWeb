@@ -4962,3 +4962,9 @@ a.badge:hover {
 .invisible {
   visibility: hidden;
 }
+
+.pr
+{
+	font-family:  Arial, sans-serif; font-weight: normal;
+	font-size: 16px;
+}
