@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html itemscope lang="cs" itemtype="http://schema.org/">
+<html itemscope lang="cs" itemtype="http://schema.org/" ng-app="project">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Language" content="cs" />
@@ -31,8 +31,13 @@
 	<script type="text/javascript">
 		!window.jQuery && document.write("<script src=\"./js/jquery.js\"><\/script>")
 	</script>
+	<script src="http://code.angularjs.org/angular-1.0.0rc6.min.js"></script>
+	<script src="./js/modules/mongo.js"></script>
+	<script src="http://code.angularjs.org/angular-resource-1.0.0rc6.min.js"></script>
+	<script src="./js/controllers/newsController.js"></script>
+	<script src="./js/controllers/messageController.js"></script>
+
 	<script src="./js/bootstrap/js/bootstrap.js"></script>
-	<script src="./js/jquery.localscroll.js"></script>
 	<script src="./js/my.js"></script>
 </head>
 <body data-spy="scroll" id="home">
@@ -67,7 +72,8 @@
       <div class="hero-unit">
         <h1>Hledáme další členy!</h1>
         <p>
-			.</p>
+		...
+		</p>
         <p><a class="btn btn-primary btn-large btn-success">Chci být členem DeveloperHubu &raquo;</a></p>
       </div>
 
@@ -120,18 +126,16 @@
 
 		</div>
 		<div class="row" id="news">
-			<div class="span8" >
-			  <h2>Novinky</h2>
-				<p class="pr">První čtvrtek v měsíci se koná neformální setkání webových vývojářů Spaghetti Code.
-			   Můžete se těšit na přednášku na téma logování od Miroslava Mrázka a na
-				   PHP5.4 od Vladislava Bělohradského. </p>
-			  <p><a class="btn" href="http://srazy.info/spaghetti-code/2265" target="_blank">Zobrazit detail srazu &raquo;</a></p>
-				<br />
 
-			   <p class="pr">Otevřely jsme první DeveloperHub v České Republice, které je pouze pro
-				   vývojáře. Přijďte se k nám podívat.  </p>
-			  <p><a class="btn" href="#contact" target="_blank">Zobrazit adresu &raquo;</a></p>
-		   </div>
+			<div class="span8" ng-controller="NewsCtrl">
+			  <h2>Novinky</h2>
+				<div ng-repeat="new in news">
+				<p class="pr">{{new.content}}</p>
+				<a class="btn" href="{{new.button_link}}" target="{{new.button_target}}">{{new.button_name}} &raquo;</a></p>
+				<br />
+				</div>
+		   	</div>
+
 			<div class="span4">
 			  <h2>Twitter</h2>
 				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
@@ -198,16 +202,28 @@
 
 		<div class="row" id="contact">
 
-			<div class="span6">
+			<div class="span6" ng-controller="MessageCtrl">
 			<h2>Kontaktní formulář</h2>
 				<br />
-				<form>
-				<input type="text" name="name" class="span5" placeholder="Vaše jméno a příjmení"> <br />
-				<input type="text" name="email" class="span5" placeholder="Vaše emailová adresa"> <br />
-				<textarea name="message" class="span5" rows="10" placeholder="Napište prosím svou zprávu"></textarea> <br />
-				<input type="button" name="send" value="Odeslat zprávu" class="btn btn-success btn-large" />
+				<form name="messageForm">
+				<input type="text" ng-model="name" class="span5" placeholder="Vaše jméno a příjmení"> <br />
+				<input type="text" ng-model="email" class="span5" placeholder="Vaše emailová adresa"> <br />
+				<textarea ng-model="message" class="span5" rows="10" placeholder="Napište prosím svou zprávu"></textarea> <br />
+				<input ng-click="save()"  type="button" name="send" value="{{send_button}}" class="btn btn-success btn-large" />
 				</form>
+
+				<div class="alert alert-success alert-msg">
+					<strong>Perfektní!</strong> Vaši zprávu jsme zaregistrovaly a co nejdříve na ní budeme reagovat.
+				</div>
+
+				<div class="alert alert-error alert-msg">
+					<strong>Zprávu se nezdařilo zaznamenat!</strong> Zkuste prosím Vaši zprávu odeslat znovu. Děkujeme.
+				</div>
 			</div>
+
+
+
+
 			<div class="span6">
 				<strong>Kontaktní adresa</strong> <br />
 				<address>
