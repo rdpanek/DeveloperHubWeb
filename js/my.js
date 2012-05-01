@@ -1,5 +1,7 @@
 angular.module('project', ['mongo']);
 
 $(function(){
-	//$('#navbar').scrollspy();
+	$('#navbar').scrollspy({
+		offset: -40
+	});
 });

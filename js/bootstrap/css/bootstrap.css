@@ -175,7 +175,7 @@ a:hover {
 .row {
   margin-left: -20px;
   *zoom: 1;
-  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .row:before,
