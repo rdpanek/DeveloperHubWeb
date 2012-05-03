@@ -104,7 +104,7 @@
 			</div>
 		</div>
 		<div class="row" id="whats">
-			<div class="span12">
+			<div class="span8">
 				<h2>Koho by mohl DeveloperHub zajímat a co nabízí</h2>
 				<br />
 				<p>
@@ -123,18 +123,48 @@
 				</p>
 
 			</div>
-
-		</div>
-		<div class="row" id="news">
-
-			<div class="span8" ng-controller="NewsCtrl">
-			  <h2>Novinky</h2>
+			<div class="span4"i id="news" ng-controller="NewsCtrl">
+			 <h2>Novinky</h2>
 				<div ng-repeat="new in news">
 				<p class="pr">{{new.content}}</p>
 				<a class="btn" href="{{new.button_link}}" target="{{new.button_target}}">{{new.button_name}} &raquo;</a></p>
 				<br />
 				</div>
-		   	</div>
+
+			</div>
+
+		</div>
+		<div class="row" id="members">
+
+			<div class="span8">
+		  <h2>Členové</h2>
+
+			<ul class="thumbnails">
+  			<li class="span3">
+      			<img src="./img/foto/dan150.png" alt="Radim Daniel Pánek">
+						<h4>Radim Daniel Pánek</h4>
+						<p>
+							Programátor - Git & Testing Specialist 
+						</p>
+  			</li>
+				<li class="span3">
+      			<img src="./img/foto/saman150.png" alt="Miroslav Mrázek">
+						<h4>Miroslav Mrázek</h4>
+						<p>
+							Podčasovač
+						</p>
+  			</li>
+			<li class="span3">
+      			<img src="./img/foto/lada150.png" alt="Ladislav Vondráček">
+						<h4>Ladislav Vondráček</h4>
+						<p>
+							Programátor - Testing Specialist
+						</p>
+  			</li>
+  
+			</ul>
+
+		  </div>
 
 			<div class="span4">
 			  <h2>Twitter</h2>
@@ -184,13 +214,6 @@
 				<br />
 
 			</div>
-		</div>
-
-		<div class="row" id="members">
-
-					<div class="span12">
-					<h2>Členové</h2>
-					</div>
 		</div>
 
 		<div class="row" id="action">
