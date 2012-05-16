@@ -421,9 +421,10 @@ a:hover {
 
 p {
   margin: 0 0 9px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding-top: 10px;
 }
 
 p small {
@@ -4934,7 +4935,7 @@ a.badge:hover {
 
 .hero-unit h1 {
   margin-bottom: 0;
-  font-size: 60px;
+  font-size: 30px;
   line-height: 1;
   letter-spacing: -1px;
   color: inherit;
@@ -4945,6 +4946,8 @@ a.badge:hover {
   font-weight: 200;
   line-height: 27px;
   color: inherit;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .pull-right {
@@ -4972,6 +4975,7 @@ a.badge:hover {
 	font-family:  Arial, sans-serif; font-weight: normal;
 	color: #666666;
 	font-size: 18px;
+	font-weight: normal;
 	text-shadow: 1px 1px 0 #FFFFFF;
 	letter-spacing: -1px;
 	line-height: 1.5;
@@ -4985,4 +4989,16 @@ a.badge:hover {
 .ico_technologi
 {
 	float: right;
+}
+
+.member_name
+{
+	font-weight: bold;
+	color: #169104;
+	padding-top: 10px;
+}
+
+.photogallery
+{
+	padding-top: 20px;
 }

@@ -58,7 +58,6 @@
               <li><a class="btn btn-large" id="nav-home" href="#home">Co je DeveloperHub</a></li>
               <li><a class="btn btn-large" id="nav-news" href="#news">Novinky</a></li>
               <li><a class="btn btn-large" id="nav-members" href="#members">Členové</a></li>
-				<li><a class="btn btn-large" id="nav-action" href="#action">Akce</a></li>
 				<li><a class="btn btn-large" id="nav-contact" href="#contact">Kontakt</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -72,9 +71,10 @@
       <div class="hero-unit">
         <h1>Hledáme další členy!</h1>
         <p>
-		...
+			Chceš se denně scházet se stejně nalazenými lidmi, jako jsi ty? Předávat dál zkušenosti a učit se nové? Chceš bojovat s
+			prokrastinací či workoholismem? Nebo hledáš zázemí pro svůj start-up?
 		</p>
-        <p><a class="btn btn-primary btn-large btn-success">Chci být členem DeveloperHubu &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large btn-success" href="#contact">Ano, chci být členem DeveloperHubu &raquo;</a></p>
       </div>
 
 
@@ -83,16 +83,11 @@
 		<div class="row" id="what">
 			<div class="span12">
 				<h2>Co je DeveloperHub</h2>
-				<br />
 				<p>
 					<span class="pr">
-						DeveloperHub je vizí coworkingového centra v Liberci, které by mělo seskupovat odborníky v
+						DeveloperHub je začínající coworkingové centrum v Liberci, které centralizuje odborníky v
 						oblastni vývoje aplikací ať již webových či desktopových pod jednou střechou a dávat jim
 						možnost pro sebe rozvíjení se.
-					</span>
-				</p>
-				<p>
-					<span class="pr">
 						Coworking znamená spolupráce. Jde o sdílený pracovní prostor pro nezávislé profesionály. V případě DeveloperHubu pouze pro vývojáře. Sdílený pracovní prostor se pronajímá pro vybrané dny nebo měsíc.
 					</span>
 				</p>
@@ -103,10 +98,12 @@
 				</p>
 			</div>
 		</div>
+
+	  <div id="news" style="height: 30px;"></div>
+
 		<div class="row" id="whats">
 			<div class="span8">
 				<h2>Koho by mohl DeveloperHub zajímat a co nabízí</h2>
-				<br />
 				<p>
 				<ul>
 				<li class="pr">otevřené a dostupné pracoviště a prostor na sobě nezávislých vývojářů 24/7</li>
@@ -121,9 +118,9 @@
 				<li class="pr">prostor pro start-upy</li>
 				</ul>
 				</p>
-
 			</div>
-			<div class="span4"i id="news" ng-controller="NewsCtrl">
+
+			<div class="span4" ng-controller="NewsCtrl">
 			 <h2>Novinky</h2>
 				<div ng-repeat="new in news">
 				<p class="pr">{{new.content}}</p>
@@ -134,35 +131,39 @@
 			</div>
 
 		</div>
-		<div class="row" id="members">
+
+	  <div id="members" style="height: 30px;"></div>
+
+		<div class="row">
 
 			<div class="span8">
 		  <h2>Členové</h2>
-
+			<div class="photogallery">
 			<ul class="thumbnails">
   			<li class="span3">
       			<img src="./img/foto/dan150.png" alt="Radim Daniel Pánek">
-						<h4>Radim Daniel Pánek</h4>
+						<div class="member_name">Radim Daniel Pánek</div>
 						<p>
-							Programátor - Git & Testing Specialist 
+							Programátor - Quality Assurance
 						</p>
   			</li>
 				<li class="span3">
       			<img src="./img/foto/saman150.png" alt="Miroslav Mrázek">
-						<h4>Miroslav Mrázek</h4>
+						<div class="member_name">Ing. Miroslav Mrázek</div>
 						<p>
-							Podčasovač
+							Programátor - NetteFramework
 						</p>
   			</li>
 			<li class="span3">
       			<img src="./img/foto/lada150.png" alt="Ladislav Vondráček">
-						<h4>Ladislav Vondráček</h4>
+						<div class="member_name">Ladislav Vondráček</div>
 						<p>
-							Programátor - Testing Specialist
+							Programátor - NetteFramework
 						</p>
   			</li>
   
 			</ul>
+			</div>
 
 		  </div>
 
@@ -216,14 +217,9 @@
 			</div>
 		</div>
 
-		<div class="row" id="action">
+	  <div id="contact" style="height: 30px;"></div>
 
-					<div class="span12">
-					<h2>Akce</h2>
-					</div>
-		</div>
-
-		<div class="row" id="contact">
+		<div class="row">
 
 			<div class="span6" ng-controller="MessageCtrl">
 			<h2>Kontaktní formulář</h2>
@@ -255,43 +251,14 @@
 					Liberec, 512 01<br />
 				</address>
 
+				<strong>Twitter:</strong> <a href="http://twitter.com/#!/Developer_Hub" target="_blank">@Developer_Hub</a><br />
 				<strong>Email:</strong> rdpanek@developerhub.cz<br />
 				<strong>Telefon:</strong> +420 731 011 200<br />
 				<strong>Kontaktní osoba:</strong> Radim Daniel Pánek
-				<br />
-				<script type="text/javascript" src="http://api4.mapy.cz/loader.js"></script>
-				<script type="text/javascript">Loader.load();</script>
-				<div style="width:500px">
-				    <div id="mapa" style="width:500px; height:333px;"></div>
-				    <p><label for="mapy-route-frm">Naplánovat cestu z: </label><input type="text" value="" id="mapy-route-frm"><input onclick="route()" type="button" value="Hledat"></p>
-				</div>
-				<script type="text/javascript">
-				    var center = SMap.Coords.fromWGS84(15.062384104288782,50.770454927718205, {orientation:SMap.NORTH});
-				    var mapa = new SMap(JAK.gel("mapa"), center,16);
-				    mapa.addDefaultLayer(SMap.DEF_SMART).enable();
-				    mapa.addDefaultControls();
-				    var node = JAK.mel("a",{href:"http://www.mapy.cz/s/3HJ6",target:'_blank'},{fontSize:"13px",lineHeight:"100%",fontFamily:"Arial,Verdana,sans-serif",textAlign:"center",display:"block",width:"165px", height:"33px",overflow:"hidden",textDecoration:"none",background:"transparent url(http://api4.mapy.cz/img/web/button-zobrazit.png) no-repeat",position:"absolute",left:"4px",bottom:"26px"});
-				    node.innerHTML = '<span style="position:relative; top:10px;text-shadow:0px 1px 1px #fff;color:#000;display:inline-block;padding-left:18px;background:transparent url(http://api4.mapy.cz/img/web/ico-zobrazit.png) 0 0 no-repeat">Zobrazit na Mapy.cz<span>';
-				    JAK.gel("mapa").appendChild(node);
-				    var layer = new SMap.Layer.Marker();
-				    mapa.addLayer(layer);
-				    layer.enable();
-				    var markerCoord = SMap.Coords.fromWGS84(15.062384104288782,50.770454927718205);
-				    var marker = new SMap.Marker(markerCoord,"MyMarker",{url:SMap.CONFIG.img + "/marker/drop-blue-asterisk.png"});
-				    layer.addMarker(marker);
-				    var overview = new SMap.Control.Overview();
-				    mapa.addControl(overview);
-				    function route() {
-				         var url = {
-				            t:"r",
-				            rc:"__15.062384104288782_50.770454927718205",
-				            rl:document.getElementById("mapy-route-frm").value + "_" + "Husova 22/11, Liberec, okres Liberec"
-				        };
-				        var arr = [];
-				        for (var p in url) { arr.push(p+"="+encodeURIComponent(url[p])); }
-				        window.location.href = "http://www.mapy.cz/#" + arr.join("&");
-				    };
-				</script>
+				<br /><br />
+
+				<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?msa=0&amp;msid=207318451575076045310.0004c0259995bc3c86e54&amp;ie=UTF8&amp;t=m&amp;z=17&amp;output=embed"></iframe><br /><small>Zobrazit místo <a href="http://maps.google.com/maps/ms?msa=0&amp;msid=207318451575076045310.0004c0259995bc3c86e54&amp;ie=UTF8&amp;t=m&amp;z=17&amp;source=embed" style="color:#0000FF;text-align:left">DeveloperHub</a> na větší mapě</small>
+
 			</div>
 
 		</div>
@@ -301,9 +268,7 @@
       <footer>
         <div>
 			<div class="ico_technologi">
-			<img src="./img/angularjs.png" /> &nbsp;
-			<img src="./img/mongolab.png" /> &nbsp;
-			<img src="./img/jquery.png" />
+			<img src="./img/angularjs.png" />
 			</div>
 		</div>
       </footer>
