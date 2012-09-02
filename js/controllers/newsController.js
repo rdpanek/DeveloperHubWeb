@@ -1,7 +1,7 @@
 function NewsCtrl($scope) {
   $scope.news = [
-    {"content": "Každý první čtvrtek v měsíci se koná neformální setkání webových vývojářů - Spaghetti Code. Můžete se těšit na zajímavá témata přednášky.",
-     "button_link": "http://srazy.info/spaghetti-code/2265",
+    {"content": "6.9.2012 se koná Spaghetti Code na téma Reflexe v PHP. Přednášejícím bude Ladislav Vondráček.",
+     "button_link": "https://plus.google.com/u/0/events/cportg1p6mbppthbn305qekr3c4/104430691967816421534",
 	 "button_target": "_blank",
 	 "button_name": "Zobrazit detail srazu"},
 
