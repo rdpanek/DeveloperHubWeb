@@ -203,6 +203,12 @@ a:hover {
   width: 940px;
 }
 
+.span12_blog {
+    width: 940px;
+    padding-bottom: 30px;
+}
+
+
 .span11 {
   width: 860px;
 }
