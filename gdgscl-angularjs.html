@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html itemscope lang="cs" itemtype="http://schema.org/" ng-app="project">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="cs" />
+	<meta http-equiv="imagetoolbar" content="no" />
+
+	<meta name="copyright" content="DeveloperHub 2012" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>AngularJS | DeveloperHub - coworkingové centrum pro vývojáře</title>
+
+	<!-- Le styles -->
+	<link href="./js/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			padding-top: 90px;
+			padding-bottom: 40px;
+		}
+	</style>
+	<link href="./js/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript"
+	        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		!window.jQuery && document.write("<script src=\"./js/jquery.js\"><\/script>")
+	</script>
+	<script src="http://code.angularjs.org/angular-1.0.0rc6.min.js"></script>
+	<script src="./js/modules/mongo.js"></script>
+	<script src="http://code.angularjs.org/angular-resource-1.0.0rc6.min.js"></script>
+	<script src="./js/bootstrap/js/bootstrap.js"></script>
+	<script src="./js/my.js"></script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-31913510-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+<body data-spy="scroll" id="home">
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="#">
+					<img src="./img/logotyp_developer_hub.png" alt="" />
+				</a>
+				<div class="nav-collapse">
+					<ul class="nav pull-right" id="navbar">
+						<li><a class="btn btn-large" id="nav-home" href="./#home">Co je DeveloperHub</a></li>
+						<li><a class="btn btn-large btn-success" id="blog" href="./blog">Blog</a></li>
+						<li><a class="btn btn-large" id="nav-news" href="./#news">Novinky</a></li>
+						<li><a class="btn btn-large" id="nav-members" href="./#members">Členové</a></li>
+						<li><a class="btn btn-large" id="nav-contact" href="./#contact">Kontakt</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row" id="what">
+			<div class="span12_blog">
+				<h2>{ DeveloperHub pořádá GDG Spaghetti Code Liberec a Hackaton na téma AngularJS</h2>
+				<p>
+					<span class="pr">
+						<a class="btn btn-danger" id="plus" target="_blank" href="https://plus.google.com/u/0/104430691967816421534/about">
+							<i class="icon-user icon-white"></i> Google +
+						</a>
+					</span>
+					<span class="pr">
+						<a class="btn btn-danger" id="youtube" target="_blank" href="https://www.youtube.com/user/developerhub/videos">
+							<i class="icon-play icon-white"></i> Youtube
+						</a>
+					</span>
+					<span class="pr">
+						<a class="btn btn-primary" id="facebook" target="_blank" href="https://www.facebook.com/pages/DeveloperHub/327231503992876">
+							<i class="icon-thumbs-up icon-white"></i> Facebook
+						</a>
+					</span>
+					<span class="pr">
+						<a class="btn btn-primary" id="twitter" target="_blank" href="https://twitter.com/Developer_Hub">
+							<i class="icon-user icon-white"></i> Twitter
+						</a>
+					</span>
+				</p>
+				<p class="pr">
+				<br />
+				<strong> 30. listopadu a 1. - 2. prosince </strong> se koná hackaton na téma <strong>AngularJS</strong>, na kterém se naučíte používat AngularJS na svých projektech.
+			<a href="https://plus.google.com/u/0/events/c7m513hls1cn2rmq9h7dkgibc90" target="_blank">Více informací a registrace</a>	
+			</p>
+			<p class="pr">
+			<strong>6. prosince</strong> pořádáme <a href="https://plus.google.com/u/0/113924472420940718852" target="_blank">GDG Spaghetti Code Liberec</a> na téma <strong>AngularJS</strong>. Pozvaný host Vojta Jína nás seznámí se základy AngularJS s testováním a dalšími zajímavými informacemi s AngularJS teamu.
+			<a href="https://plus.google.com/u/0/events/cgufahtqq2srnkon9vnb6n5d8lc" target="_blank">Více informací a registrace</a>
+
+			</p>
+			</div>
+			<div class="span12_blog">
+				<h2>Videopozvánka na GDG Spaghetti Code Liberec a AngularJS Hackaton s Vojtou Jínou</h2>
+				<p>
+					<span class="pr">
+						S Vojtou Jínou jsme pro Vás natočili videopozvánku.
+					</span>
+				</p>
+				<iframe width="560" height="315" src="http://www.youtube.com/embed/Sv8fC3qGhnk" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<hr>
+		<footer>
+			<div>
+				<div class="ico_technologi">
+					<img src="./img/angularjs.png" />
+				</div>
+			</div>
+		</footer>
+	</div> <!-- /container -->
+</body>
+</html>
